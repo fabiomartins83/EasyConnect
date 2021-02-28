@@ -1,0 +1,31 @@
+UTILIZADOS (CAIXA DE TEXTO)
+ text
+ password
+ email
+ tel
+ number
+
+NÃO UTILIZADOS (CAIXA DE TEXTO)
+ date
+ time
+
+UTILIZADOS (OUTROS INPUTS)
+ button (botão geral)
+ submit (botão enviar)
+ reset (botão limpar)
+ radio (botão de opção)
+
+NÃO UTILIZADOS (OUTROS INPUTS)
+ checkbox
+ file
+ image
+ range
+ search
+ url
+ 
+RÓTULO: label
+CAIXA DE TEXTO: input (text,password,email,tel,date,time)
+
+GRUPO DE OPÇÕES: input (radio)
+CAIXA DE SELEÇÃO: input (checkbox)
+CAIXA DE COMBINAÇÃO: select

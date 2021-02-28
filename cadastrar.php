@@ -1,5 +1,5 @@
 <?php
-require "iniciar.php";
+require_once "functions.php";
 ?>
 
 <!DOCTYPE html>
@@ -66,6 +66,14 @@ require "iniciar.php";
 				<label for="data" class="rotulo">Data de nascimento: </label>
 				<input type="text" name="data" id="data" placeholder="Data de nascimento" autocomplete="off" onkeypress="MascaraData(this)" onblur="ValidaData(this)">
 				<br>
+				<label for="genero" class="rotulo">Gênero: </label>
+				<input type="radio" name="genero" id="masculino" value="Masculino">
+				<label for="masculino">Masculino</label>
+				<input type="radio" name="genero" id="feminino" value="Feminino">
+				<label for="masculino">Feminino</label>
+				<input type="radio" name="genero" id="outrogen" value="Outro">
+				<label for="masculino">Outro</label>
+				<br>
 				<label for="tel" class="rotulo">Telefone celular ou residencial: </label>
 				<input type="tel" name="tel" id="tel" placeholder="Telefone" autocomplete="off" onkeypress="MascaraTelefone(this)" onblur="ValidaTelefone(this)">
 				<br>
@@ -73,16 +81,16 @@ require "iniciar.php";
 				<input type="text" name="cep" id="cep" placeholder="CEP" autocomplete="off" onkeypress="MascaraCep(this)" onblur="ValidaCep(this)">
 				<br>
 				<label for="logradouro" class="rotulo">Logradouro: </label>
-				<input type="text" name="logradouro" id="logradouro" placeholder="Logradouro" autocomplete="off" disabled onfocus="document.getElementById('numend').focus()">
+				<input type="text" name="logradouro" id="logradouro" placeholder="Logradouro" autocomplete="off" readonly onfocus="document.getElementById('numend').focus()">
 				<br>
-				<label for="logradouro" class="rotulo">Bairro: </label>
-				<input type="text" name="bairro" id="bairro" placeholder="Bairro" autocomplete="off" disabled>
+				<label for="bairro" class="rotulo">Bairro: </label>
+				<input type="text" name="bairro" id="bairro" placeholder="Bairro" autocomplete="off" readonly>
 				<br>
 				<label for="cidade" class="rotulo">Cidade: </label>
-				<input type="text" name="cidade" id="cidade" placeholder="Cidade" autocomplete="off" disabled>
+				<input type="text" name="cidade" id="cidade" placeholder="Cidade" autocomplete="off" readonly>
 				<br>
 				<label for="uf" class="rotulo">UF: </label>
-				<input type="text" name="uf" id="uf" placeholder="Estado" autocomplete="off" disabled>
+				<input type="text" name="uf" id="uf" placeholder="Estado" autocomplete="off" readonly>
 				<br>
 				<label for="numend" class="rotulo">Número de endereço: </label>
 				<input type="text" name="numend" id="numend" placeholder="Número de logradouro" min="0" autocomplete="off">

@@ -1,5 +1,5 @@
 <?php
-require "iniciar.php"; // inclui o arquivo de inicialização
+require "functions.php"; // inclui o arquivo de inicialização
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
 if (empty($email) || empty($senha)) {

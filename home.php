@@ -1,7 +1,7 @@
 <?php
 session_start();
  
-require_once "iniciar.php";
+require_once "functions.php";
 //require "check.php"; //substituído pelas três linhas abaixo
 if (!isLoggedIn()) {
     header("Location: entrar.php");
@@ -26,7 +26,7 @@ if (!isLoggedIn()) {
 	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico"> 
 	<link rel="alternative" type="application/rss+xml" title="Feed RSS - EasyConnect" href="./feed">
 -->
-    <link rel="stylesheet" href="./css/connect.css">
+    <link rel="stylesheet" type="text/css" href="./css/connect.css">
 	<link rel="start" title="EasyConnect - Login" href="./entrar.php">
 	<link rel="index" title="EasyConnect - Home" href=./home.php">
 	
@@ -47,7 +47,19 @@ if (!isLoggedIn()) {
 		<h1 class="titulo">EasyConnect SP</h1>
 	</header>
 
-	<p>Olá, <?php //echo $_SESSION['user_name']; ?>. </p>
+	<p>Olá, <?php echo $_SESSION['user_name']; ?>. </p>
+	<h2 class="central">Pesquisar cadastro de usuários </h2>
+	<div>
+		<form name="formconsulta" id="formconsulta" action="consultar.php" method="POST">
+			<fieldset>
+				<label for="caixanome">Nome do usuário: </label>
+				<input type="text" name="nome" id="nome" placeholder="Insira o nome do usuário">
+				<input type="submit" name="botaopesquisar" id="botaopesquisar" value="Pesquisar">
+			</fieldset>
+		</form>
+		<br>
+		<button name="botaoapaga" id="botaoapaga" formaction="limpacadastro.php" formmethod="GET">Apagar cadastro</button>
+	</div>
 	<a href="logout.php">Sair</a>
 
 </body>

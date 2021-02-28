@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "iniciar.php";
+require_once "functions.php";
 ?>
 
 <!DOCTYPE html>
@@ -39,29 +39,30 @@ require "iniciar.php";
  -->
 		<h1 class="titulo">EasyConnect SP</h1>
 	</header>
-	
+	<br>
 	<?php if (isLoggedIn()): ?>
 	<!--	<p>Olá, <?php //echo $_SESSION['user_name']; ?>. 
 	<br><br><br>
 	<a href="home.php" class="links" style="text-align: center">Acessar o sistema</a> | <a href="logout.php">Sair</a></p> -->
     <script language='javascript' type='text/javascript'>window.location.href='home.php';</script>
-	<br><br><br>
 	<?php else: ?>
 		<main>
-<!--	<h2>Login</h2> -->
-		<p class="central">Insira abaixo seu <strong>e-mail</strong> e sua <strong>senha</strong> para acessar.</p>
-		<form name="formlogin" method="POST" action="login.php">
-			<fieldset>
-				<label for="email" class="rotulo">E-mail: </label>
-				<input type="text" name="email" id="email" placeholder="Digite seu e-mail" size="40">
-				<br>
-				<label for="senha" class="rotulo">Senha: </label>
-				<input type="password" name="senha" id="senha" placeholder="Digite sua senha" size="40">
-				<br>
-				<input type="submit" value="Acessar" id="entrar" name="entrar">
-				<input type="reset" value="Limpar" id="reset" name="reset">
-			</fieldset>
-		</form>
+			<h2 class="titulo">Login</h2> 
+			<br>
+			<p class="central">Insira abaixo seu <strong>e-mail</strong> e sua <strong>senha</strong> para acessar.</p>
+			<form name="formlogin" method="POST" action="login.php">
+				<fieldset>
+					<label for="email" class="rotulo">E-mail: </label>
+					<input type="text" name="email" id="email" placeholder="Digite seu e-mail" size="40" class="caixatexto">
+					<br>
+					<label for="senha" class="rotulo">Senha: </label>
+					<input type="password" name="senha" id="senha" placeholder="Digite sua senha" size="40" class="caixatexto">
+					<br>
+					<input type="submit" value="Acessar" id="entrar" name="entrar" class="botoes">
+					<input type="reset" value="Limpar" id="reset" name="reset" class="botoes">
+				</fieldset>
+			</form>
+			<br><br>
 		</main>
 		<br>
 		<nav class="links">
