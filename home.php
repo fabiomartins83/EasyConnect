@@ -29,9 +29,9 @@ if (!isLoggedIn()) {
     <link rel="stylesheet" type="text/css" href="./css/connect.css">
 	<link rel="start" title="EasyConnect - Login" href="./entrar.php">
 	<link rel="index" title="EasyConnect - Home" href=./home.php">
-	
 	<title> EasyConnect - Home </title>
-	
+	<script type="text/javascript" src="./js/jquery3-min.js"></script>
+	<script type="text/javascript" src="./js/connect.js"></script>
 </head>
 
 <body>
@@ -49,14 +49,18 @@ if (!isLoggedIn()) {
 
 	<p>Olá, <?php echo $_SESSION['user_name']; ?>. </p>
 	<h2 class="central">Pesquisar cadastro de usuários </h2>
-	<div>
-		<form name="formconsulta" id="formconsulta" action="consultar.php" method="POST">
+	<div class="central">
+		<p>Digite o nome na caixa de texto ao lado: </p>
+		<!-- <form name="formconsulta" id="formconsulta" action="consultar.php" method="POST"> -->
+		<form name="formconsulta" id="formconsulta">
 			<fieldset>
-				<label for="caixanome">Nome do usuário: </label>
-				<input type="text" name="nome" id="nome" placeholder="Insira o nome do usuário">
-				<input type="submit" name="botaopesquisar" id="botaopesquisar" value="Pesquisar">
+				<label for="caixanome">Nome: </label>
+				<input type="text" name="nome" id="nome" autocomplete="off" placeholder="Insira o nome do usuário" onkeyup="enviarRequisicao(this.value,'getHint.php')">
 			</fieldset>
 		</form>
+	</div>
+	<div class="central">
+		<p>Sugestões: <span id="sugestao"></span></p>
 		<br>
 		<button name="botaoapaga" id="botaoapaga" formaction="limpacadastro.php" formmethod="GET">Apagar cadastro</button>
 	</div>

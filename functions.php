@@ -6,7 +6,7 @@ error_reporting(E_ALL);
  // constantes com as credenciais de acesso ao banco MySQL
 define("DB_SGDB", "mysql");
 define("DB_HOST", "localhost");
-define("DB_PORT", "3308");
+define("DB_PORT", "3306");
 define("DB_USER", "root");
 define("DB_PASS", "");
 define("DB_NAME", "bdCentral");

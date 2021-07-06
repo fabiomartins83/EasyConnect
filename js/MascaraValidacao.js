@@ -170,7 +170,6 @@ function MascaraCep(cep) {
 
 function ValidaCep(numcep){
 	exp = /\d{5}\-\d{3}/
-	//alert("Teste1");
 	if(!exp.test(numcep.value)) {
 		alert('CEP incorreto. Insira novamente.')
 	} else {
@@ -180,7 +179,7 @@ function ValidaCep(numcep){
 				return false;
 			}
 			var url = "https://viacep.com.br/ws/"+cep+"/json/";
-			alert("Enviando CEP para "+url);
+			alert("Enviando CEP para "+url+". Aguarde alguns instantes.");
 			$.getJSON(url, function(dadosRetorno){
 				try{
 					$("#logradouro").val(dadosRetorno.logradouro);
