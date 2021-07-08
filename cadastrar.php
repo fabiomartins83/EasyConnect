@@ -151,8 +151,8 @@ require_once "functions.php";
 					<br>
 				</fieldset>
 				<fieldset>
-				<legend class="rotulo">Documentos</legend>
-				<p>
+					<legend class="rotulo">Documentos</legend>
+					<p>
 					<label for="enviararquivo" class="rotulo">Escolha uma fotografia sua: </label>
 					<input class="botoes btn-success" type="file" name="enviararquivo" id="enviararquivo" placeholder="Fotografia" autocomplete="off"">
 					</p>

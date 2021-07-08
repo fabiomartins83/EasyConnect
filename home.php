@@ -55,7 +55,7 @@ if (!isLoggedIn()) {
 				<fieldset>
 					<legend class="rotulo">Formulário de consulta</legend>
 					<label for="caixanome">Nome: </label>
-					<input type="text" name="nome" id="nome" autocomplete="off" placeholder="Insira o nome do usuário" onkeyup="enviarRequisicao(this.value,'getHint.php')">
+					<input type="search" name="nome" id="nome" autocomplete="off" placeholder="Insira o nome do usuário" onkeyup="enviarRequisicao(this.value,'getHint.php')">
 				</fieldset>
 			</form>
 		</div>
