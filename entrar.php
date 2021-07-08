@@ -20,11 +20,22 @@ require_once "functions.php";
 <!--
 	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico"> 
 	<link rel="alternative" type="application/rss+xml" title="Feed RSS - EasyConnect" href="./feed">
--->
+
+	<script type="text/javascript" src="./js/MascaraValidacao.js"></script>
+	<script type="text/javascript" src="./js/jquery3-min.js"></script>
     <link rel="stylesheet" href="./css/connect.css">
 	<link rel="start" title="EasyConnect - Login" href="./entrar.php">
-	<link rel="index" title="EasyConnect - Home" href=./home.php">
+	<link rel="index" title="EasyConnect - Home" href="./home.php">
+-->
 	<title> EasyConnect - Login </title>
+	<script type="text/javascript" src="./js/jquery3-min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="./js/MascaraValidacao.js"></script>
+	<script type="text/javascript" src="./js/connect.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/connect.css">
+	<link rel="start" title="EasyConnect - Login" href="./entrar.php">
+	<link rel="index" title="EasyConnect - Home" href=./home.php">
 </head>
 
 <body>
@@ -37,7 +48,7 @@ require_once "functions.php";
 			</figure>
 		</div>
  -->
-		<h1 class="titulo">EasyConnect SP</h1>
+		<h1 class="titulo" id="titulo1">EasyConnect SP</h1>
 	</header>
 	<br>
 	<?php if (isLoggedIn()): ?>
@@ -49,29 +60,35 @@ require_once "functions.php";
 		<main>
 			<h2 class="titulo">Login</h2> 
 			<br>
-			<p class="central">Insira abaixo seu <strong>e-mail</strong> e sua <strong>senha</strong> para acessar.</p>
 			<form name="formlogin" method="POST" action="login.php">
 				<fieldset>
-					<label for="email" class="rotulo">E-mail: </label>
-					<input type="text" name="email" id="email" placeholder="Digite seu e-mail" size="40" class="caixatexto">
+					<legend class="rotulo">Formulário de login</legend>
 					<br>
-					<label for="senha" class="rotulo">Senha: </label>
-					<input type="password" name="senha" id="senha" placeholder="Digite sua senha" size="40" class="caixatexto">
+					<p>Insira abaixo seu <u><strong>e-mail</strong></u> e sua <u><strong>senha</strong></u> para acessar.</p>
+					<div>
+						<label for="email" class="rotulo">E-mail: </label>
+						<input type="text" name="email" id="email" placeholder="Digite seu e-mail" size="40" class="caixatexto">
+						<br>
+						<label for="senha" class="rotulo">Senha: </label>
+						<input type="password" name="senha" id="senha" placeholder="Digite sua senha" size="40" class="caixatexto">
+					</div>
 					<br>
-					<input type="submit" value="Acessar" id="entrar" name="entrar" class="botoes">
-					<input type="reset" value="Limpar" id="reset" name="reset" class="botoes">
+					<div>
+						<input type="submit" value="Acessar" id="entrar" name="entrar" class="botoes btn-success">
+						<input type="reset" value="Limpar" id="reset" name="reset" class="botoes btn-success">
+					</div>
 				</fieldset>
 			</form>
 			<br><br>
 		</main>
 		<br>
 		<nav class="links">
-			<a href="cadastrar.php" style="text-align: center">Cadastre-se</a>
+			<a href="cadastrar.php">Cadastre-se</a>
 		</nav>
 		<br><br><br>
 	<?php endif; ?>
 
-    <footer class="rodape"><small>© 2020  -  <strong>Fábio de Almeida Martins</strong></small></footer>
+    <footer class="rodape"><small>© 2020  -  <b>Fábio de Almeida Martins</b></small></footer>
 	
 </body>
 </html>

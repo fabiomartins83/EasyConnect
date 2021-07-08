@@ -9,70 +9,160 @@
     text-orientation: portrait;
 }
 
-img, embed, object, video {
-/* Adapta imagens e vídeos de acordo com o layout do dispositivo. */
-/*  display: block; */
-    max-width: 100%;
-    height: auto;
-}
-
-table {
-	margin: auto;
-}
-
 body {
-/*  font-size: 62.5%; */
+/*
+	font-size: 62.5%; 
+*/
     font-family: Arial;
-    font-size: 12pt;
+    font-size: 10pt;
     font-weight: normal;
     background-color: #FFF;
     color: #000;
+    text-align: center;
+    padding: 5pt;
+    cursor: default;
+}
+
+main {
+	line-height: 1.5;
+	text-align: center;
 }
 
 a {
     color: #00F;
+    text-decoration: underline;
 }
 
-.titulo{
+h1,h2 {
     text-align: center;
-/*    font-family: Arial;
-    font-size: 32pt; */
-    font-weight: bold;
-    color: #000;
 }
 
+img, embed, object, video {
+/* Adapta imagens e vídeos de acordo com o layout do dispositivo. */
+/*
+    display: inline;
+*/
+    margin: 5pt;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+	position: relative;
+	text-align: center;
+	font-family: Arial;
+	font-size: 10pt;
+	color: #FFF;
+	line-height: 1;
+}
+
+table {
+    margin: auto;
+    border: solid 1px #000;
+}
+    
+form {
+    display: inline;
+}
+
+fieldset {
+    display: inline;
+    margin: 5pt 10pt;
+    padding: 10pt;
+	border: solid 1px #000;
+    text-align:left;
+    background-color: #FFF;
+}
+
+legend {
+    display: block;
+    text-align: center;
+}
+
+input, button {
+    display: inline;
+	margin: 3pt;
+	padding: 2pt;
+}
+
+label {
+    display: inline;
+	width: 35px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number], input[type=date], input[type=time], input[type=url]
+{
+    display: inline;
+    padding: 1pt;
+	border-radius: 4px; 
+	border: solid 1px #444; 
+    background-color: #EEE;
+}
+
+button, input[type=submit], input[type=reset] {
+    display: inline;
+	padding:6px 10px;
+	font-weight: bold;
+	border-radius: 4px;
+	cursor:pointer;
+/*
+    border:1px solid #25692A;
+	font-family:Verdana;
+	font-size:12px;
+	border-color:#46a7f5;
+	text-decoration:none;
+	background:linear-gradient(to bottom, #86c6f8 5%, #46a7f5 100%); 
+	box-shadow:inset 0px 1px 0px 0px #d7ecfd;
+	color:#fff; 
+	text-shadow:0px 1px 0px #528009;
+*/
+}
+
+.titulo {
+/*	font-family: Times New Roman;
+    font-size: 24pt;
+    font-weight: bold;  
+    color: #0F0; */
+}
+        
 .corpodetexto {
-	text-align: left;
-    font-size: 12pt;
+    font-weight: normal;
+    text-align: left;
+}
+
+.links {
+/*	position: absolute;
+	left: 45%; */
+	font-family: Arial;
+	font-size: 10pt;
+	text-align: center;
+	line-height: 1.5;
 }
 
 .rodape {
     position: absolute;
-    right: 1%;
+    right: 2%;
     text-align: center;
     bottom: 1;
-    font-family: Times New Roman;   
+    font-family: Arial;
+    font-size: 10pt;
     font-weight: normal;
     color: #000;
+    line-height: 1;
 }
 
-.links {
-/*  position: absolute;
-    left: 45%; */
-    text-align: center;
-    font-size: 12pt;
+.imagem {
+/*    display: auto; */
+    position: relative;
+    text-align: right;
 }
 
 .tabela {
 	text-align: center;
     font-family: Times New Roman;   
     font-size: 12pt;
-}
-
-.imagens {
-/*  display: auto; */
-    position: relative;
-    text-align: right;
 }
 
 .imgdescr {
@@ -83,59 +173,76 @@ a {
     color: #000;
 }
 
-#logo {
-	display: block;
-	margin: 5pt;
-	text-align: center;
+.rotulo {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.numero {
+	font-family: Times New Roman;
+}
+
+.arial10 {
+    font-family: Arial;
+	font-size: 10pt;
+}
+
+.times14 {
+    font-family: Times New Roman;
+	font-size: 14pt;
 }
 
 .central {
 	text-align: center;
 }
 
-.rotulo {
-	font-size: 12pt;
-	font-weight: bold;
+.esquerda {
+    text-align: left;
 }
 
-fieldset {
-	width: 98%;
+.bordainvisivel {
+	border: transparent;
+}
+
+.container {
+    display: table;
+    width: 100%;
+    clear: both;
+}
+
+.container p {
+    display: table-row;
+}
+
+@font-face {
+    font-family: 'Old English Gothic';
+    src: url('./fonts/OldEnglishGothic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/OldEnglishGothic.woff2') format('woff2'),
+        url('./fonts/OldEnglishGothic.woff') format('woff'),
+        url('./fonts/OldEnglishGothic.svg#OldEnglishGothic') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+.primletra {
+/*	font-family: Times New Roman; */
+	font-family: 'Old English Gothic'; 
+	font-size: 24pt;
+	color: #F00;
+}
+
+#logo {
+	display: block;
 	margin: 5pt;
-	border: solid 1px transparent;
-	text-align: center; 
+	text-align: center;
 }
 
-input, label, button {
-	display: inline;
-	margin: 3pt;
-	padding: 2pt;
-	font-size: 12pt;
+#audioplayer {
+	text-align: center;
 }
 
-label {
-	width: 35px;
-	padding-right: 20px;
-	padding-bottom: 10px;
+#titulo1 {
+/*	font-family: Times New Roman;	
+	font-size: 24pt;
+	color: #000; */
 }
-
-input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number], input[type=date], input[type=time], input[type=url]
-{
-	border-radius: 10px; 
-	border: solid 2px; 
-}
-
-button, input[type=submit], input[type=reset] {
-	border:1px solid #25692A;
-	border-radius:4px;
-	display:inline-block;
-	cursor:pointer;
-	font-family:Verdana;
-	font-weight:bold;
-	font-size:13px;
-	padding:6px 10px;
-	text-decoration:none;
-	border-color:#46a7f5;
-	background:linear-gradient(to bottom, #86c6f8 5%, #46a7f5 100%);
-	box-shadow:inset 0px 1px 0px 0px #d7ecfd;
-	color:#fff;
-	text-shadow:0px 1px 0px #528009;}
